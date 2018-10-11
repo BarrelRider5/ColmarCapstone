@@ -1,0 +1,17 @@
+html {
+  font-size: 16px;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.coursewrapper {
+  display: flex;
+}
