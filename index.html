@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="Resources/css/reset.css" rel="stylesheet" type="text/css">
     <link href="Resources/css/style.css" rel="stylesheet" type="text/css">
     <title>Colmar Academy</title>
@@ -10,13 +11,15 @@
 <!-- header -->
 
     <header>
-      <div class="headerleft ">
-        <img src="Resources/Images/ic-logo.svg" alt="logo"/>
-        <h1>Colmar</h1>
-        <h1>Academy</h1>
-      </div>
-      <div class="headerright">
-        <ul>
+      <div class="headerwrapper flexrow">
+        <div class="headerleft flexrow">
+          <img src="Resources/Images/ic-logo.svg" alt="logo"/>
+          <div class="ColmarAcademy flexrow">
+            <h1>Colmar</h1>
+            <h1>Academy</h1>
+          </div>
+        </div>
+        <ul class="headerright flexrow">
           <li>On campus</li>
           <li>Online</li>
           <li>For companies</li>
@@ -29,9 +32,9 @@
 
     <div class="segments">
       <div class="banner segment flexrow">
-        <div class="bannerwrapperleft flexcolumn">
+        <!-- <div class="bannerwrapperleft"> -->
           <img src="Resources/Images/banner.jpg" alt="banner image"/>
-        </div>
+        <!-- </div> -->
         <div class="bannerwrapperright flexcolumn">
           <h2>Learn something new everyday</h2>
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -47,31 +50,31 @@
           <span>Emanuel, Sr Strategist at Hiring.com</span>
         </div>
         <div class="informationwrapperright flexcolumn">
-          <div class="info_righthalf flexrow">
+          <div class="infowrapright_top info_righthalf flexrow">
             <div class="info_image">
               <img src="Resources/Images/information-orientation.jpg" alt="orientation"/>
             </div>
-            <div class="infowrapright_top infoimageright flexcolumn">
+            <div class="infoimageright flexcolumn">
               <h3>Orientation date</h3>
               <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
               <a href="">Read more</a>
             </div>
           </div>
-          <div class="info_righthalf flexrow">
+          <div class="infowrapright_middle info_righthalf flexrow">
             <div class="info_image">
               <img src="Resources/Images/information-campus.jpg" alt="campus"/>
             </div>
-            <div class="infowrapright_middle infoimageright flexcolumn">
+            <div class="infoimageright flexcolumn">
               <h3>Our campus</h3>
               <p>Find which campus is close by you</p>
               <a href="">Read more</a>
             </div>
           </div>
-          <div class="info_righthalf flexrow">
+          <div class="infowrapright_bottom info_righthalf flexrow">
             <div class="info_image">
               <img src="Resources/Images/information-guest-lecture.jpg" alt="guest lecture"/>
             </div>
-            <div class="infowrapright_bottom infoimageright flexcolumn">
+            <div class="infoimageright flexcolumn">
               <h3>Our guest lecture</h3>
               <p>Join a keynote with Oliver Sack about music in medical treatment</p>
               <a href="">Read more</a>
@@ -85,41 +88,53 @@
           <h2>Start learning</h2>
         </div>
         <div class="coursewrapper">
-          <div class="softwareimage courseimage flexcolumn">
+          <div class="softwareimage courseimages flexcolumn">
             <img src="Resources/Images/course-software.jpg" alt="software"/>
-            <h3>Software engineering</h3>
-            <p class="courselist">Courses</p>
-            <p>Web Development, Mobile Development, iOT, APIs</p>
+            <div class="courseimage flexcolumn">
+              <h3>Software engineering</h3>
+              <p class="courselist">Courses</p>
+              <p>Web Development, Mobile Development, iOT, APIs</p>
+            </div>
           </div>
-          <div class="computerimage courseimage flexcolumn">
+          <div class="computerimage courseimages flexcolumn">
             <img src="Resources/Images/course-computer-art.jpg" alt="computer"/>
-            <h3>Computer art</h3>
-            <p class="courselist">Courses</p>
-            <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+            <div class="courseimage flexcolumn">
+              <h3>Computer art</h3>
+              <p class="courselist">Courses</p>
+              <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+            </div>
           </div>
-          <div class="designimage courseimage flexcolumn">
+          <div class="designimage courseimages flexcolumn">
             <img src="Resources/Images/course-design.jpg" alt="design"/>
-            <h3>Design</h3>
-            <p class="courselist">Courses</p>
-            <p>User Experience Design, User Research, Visual Design</p>
+            <div class="courseimage flexcolumn">
+              <h3>Design</h3>
+              <p class="courselist">Courses</p>
+              <p>User Experience Design, User Research, Visual Design</p>
+            </div>
           </div>
-          <div class="dataimage courseimage flexcolumn">
+          <div class="dataimage courseimages flexcolumn">
             <img src="Resources/Images/course-data.jpg" alt="data"/>
-            <h3>Data</h3>
-            <p class="courselist">Courses</p>
-            <p>Data Science, Big Data, SQL, Data Visualization</p>
+            <div class="courseimage flexcolumn">
+              <h3>Data</h3>
+              <p class="courselist">Courses</p>
+              <p>Data Science, Big Data, SQL, Data Visualization</p>
+            </div>
           </div>
-          <div class="businessimage courseimage flexcolumn">
+          <div class="businessimage courseimages flexcolumn">
             <img src="Resources/Images/course-business.jpg" alt="business"/>
-            <h3>Business</h3>
-            <p class="courselist">Courses</p>
-            <p>Product Development, Business Development, Startup</p>
+            <div class="courseimage flexcolumn">
+              <h3>Business</h3>
+              <p class="courselist">Courses</p>
+              <p>Product Development, Business Development, Startup</p>
+            </div>
           </div>
-          <div class="marketingimage courseimage flexcolumn">
+          <div class="marketingimage courseimages flexcolumn">
             <img src="Resources/Images/course-marketing.jpg" alt="marketing"/>
-            <h3>Marketing</h3>
-            <p class="courselist">Courses</p>
-            <p>Analytics, Content Marketing, Mobile Marketing</p>
+            <div class="courseimage flexcolumn">
+              <h3>Marketing</h3>
+              <p class="courselist">Courses</p>
+              <p>Analytics, Content Marketing, Mobile Marketing</p>
+            </div>
           </div>
         </div>
       </div>
@@ -138,20 +153,20 @@
             <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
           </div>
           <div class="thesiswrapperright flexcolumn">
-            <div class="thesis_righthalf flexrow">
+            <div class="thesiswrapright_top thesis_righthalf flexrow">
               <div class="thesis_image">
                 <img src="Resources/Images/thesis-fisma.jpg" alt="fisma"/>
               </div>
-              <div class="thesiswrapright_top thesisimageright flexcolumn">
+              <div class="thesisimageright flexcolumn">
                 <h3>Fisma: Design and Prototype</h3>
                 <p>Designer showcase of new prototype product</p>
               </div>
             </div>
-            <div class="thesis_righthalf flexrow">
+            <div class="thesiswrapright_bottom thesis_righthalf flexrow">
               <div class="thesis_image">
                 <img src="Resources/Images/thesis-now-and-then.jpg" alt="now and then"/>
               </div>
-              <div class="thesiswrapright_bottom thesisimageright flexcolumn">
+              <div class="thesisimageright flexcolumn">
                 <h3>Now and then</h3>
                 <p>Research study about New York</p>
               </div>
