@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"> -->
     <link href="Resources/css/reset.css" rel="stylesheet" type="text/css">
     <link href="Resources/css/style.css" rel="stylesheet" type="text/css">
     <title>Colmar Academy</title>
@@ -12,21 +12,32 @@
 
     <header>
       <div class="headerwrapper flexrow">
-        <div class="headerleft flexrow">
+        <div class="headerleft flexrow mobile_nodisplay">
           <img src="Resources/Images/ic-logo.svg" alt="logo"/>
           <div class="ColmarAcademy flexrow">
             <h1>Colmar</h1>
             <h1>Academy</h1>
           </div>
         </div>
-        <ul class="headerright flexrow">
+        <ul class="headerright flexrow mobile_nodisplay">
           <li>On campus</li>
           <li>Online</li>
           <li>For companies</li>
           <li>Sign in</li>
         </ul>
+<!-- For mobile -->
+        <div class="mobileheader flexrow mobile_visible">
+          <img src="Resources/Images/ic-logo.svg" alt="logo"/>
+          <img src="Resources/Images/ic-on-campus.svg" alt="campus icon"/>
+          <img src="Resources/Images/ic-online.svg" alt="online icon"/>
+          <img src="Resources/Images/ic-login.svg" alt="login icon"/>
+        </div>
       </div>
     </header>
+
+<!-- To compensate for fixed header overlap -->
+    <div class="header_backgrounddiv">
+    </div>
 
 <!-- main body -->
 
@@ -43,7 +54,7 @@
       </div>
 
       <div class="information segment flexrow">
-        <div class="informationwrapperleft flexcolumn">
+        <div class="informationwrapperleft flexcolumn mobile_nodisplay">
           <img src="Resources/Images/information-main.jpg" alt="main info"/>
           <h2>It doesn't hurt to keep practicing</h2>
           <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
@@ -52,7 +63,8 @@
         <div class="informationwrapperright flexcolumn">
           <div class="infowrapright_top info_righthalf flexrow">
             <div class="info_image">
-              <img src="Resources/Images/information-orientation.jpg" alt="orientation"/>
+              <img class="mobile_nodisplay" src="Resources/Images/information-orientation.jpg" alt="orientation"/>
+              <img class="mobile_visible" src="Resources/Images/information-orientation-mobile.jpg" alt="orientation"/>
             </div>
             <div class="infoimageright flexcolumn">
               <h3>Orientation date</h3>
@@ -62,7 +74,8 @@
           </div>
           <div class="infowrapright_middle info_righthalf flexrow">
             <div class="info_image">
-              <img src="Resources/Images/information-campus.jpg" alt="campus"/>
+              <img class="mobile_nodisplay" src="Resources/Images/information-campus.jpg" alt="campus"/>
+              <img class="mobile_visible" src="Resources/Images/information-campus-mobile.jpg" alt="campus"/>
             </div>
             <div class="infoimageright flexcolumn">
               <h3>Our campus</h3>
@@ -72,7 +85,8 @@
           </div>
           <div class="infowrapright_bottom info_righthalf flexrow">
             <div class="info_image">
-              <img src="Resources/Images/information-guest-lecture.jpg" alt="guest lecture"/>
+              <img class="mobile_nodisplay" src="Resources/Images/information-guest-lecture.jpg" alt="guest lecture"/>
+              <img class="mobile_visible" src="Resources/Images/information-guest-lecture-mobile.jpg" alt="guest lecture"/>
             </div>
             <div class="infoimageright flexcolumn">
               <h3>Our guest lecture</h3>
@@ -141,7 +155,8 @@
 
       <div class="thesis segment flexcolumn">
         <div class="thesisheading">
-          <h2>Thesis exhibit</h2>
+          <h2 class="mobile_nodisplay">Thesis exhibit</h2>
+          <h2 class="mobile_visible">Thesis exhibits</h2>
         </div>
         <div class="thesiswrapperouter flexrow">
           <div class="thesiswrapperleft flexcolumn">
@@ -149,10 +164,10 @@
             <video autoplay loop>
               <source src="Resources/Videos/thesis.mp4" type="video/mp4">
             </video>
-            <h3>Reimagine urban</h3>
-            <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+            <h3 class="mobile_nodisplay">Reimagine urban</h3>
+            <p class="mobile_nodisplay">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
           </div>
-          <div class="thesiswrapperright flexcolumn">
+          <div class="thesiswrapperright flexcolumn mobile_nodisplay"">
             <div class="thesiswrapright_top thesis_righthalf flexrow">
               <div class="thesis_image">
                 <img src="Resources/Images/thesis-fisma.jpg" alt="fisma"/>
@@ -183,7 +198,7 @@
         <div class="footerleft">
           <span>&copy2016 Colmar Academy. All rights reserved</span>
         </div>
-        <div class="footerright">
+        <div class="footerright mobile_nodisplay">
           <a href="#">Terms</a>
           <a href="#">Privacy</a>
         </div>

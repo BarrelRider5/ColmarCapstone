@@ -22,6 +22,10 @@ h3 {
   font-weight: 600;
 }
 
+a {
+  text-decoration: none;
+}
+
 .flexcolumn {
   display: flex;
   flex-direction: column;
@@ -32,8 +36,8 @@ h3 {
   flex-direction: row;
 }
 
-a {
-  text-decoration: none;
+.mobile_visible {
+  display: none;
 }
 
 /* Why do these links seem to always be orange, rather than only after they have been visited? */
@@ -84,9 +88,13 @@ a:visited {
   padding-left: 16px;
 }
 
+.header_backgrounddiv {
+  background-color: blue;
+  height: 64px;
+  width: 100%;
+}
+
 .segments {
-  /* To compensate for fixed header overlap */
-  margin-top: 64px;
   width: 100%;
 }
 
@@ -255,4 +263,114 @@ a:visited {
 
 .footerright a:last-of-type {
   margin-left: 8px;
+}
+
+/*----- Media Queries -----*/
+
+@media only screen and (max-width: 430px) {
+  html {
+    font-size: 12px;
+    /* I probably need to make this smaller for headings, etc. */
+  }
+
+  .banner {
+    /* This doesn't work unless I apply specific classes/id's. */
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile_nodisplay {
+    display: none;
+  }
+
+  .mobile_visible {
+    display: flex;
+  }
+
+/* WHY ISN'T THIS STUPID PIECE OF JUNK WORKING????? */
+
+/* Never mind. Got it. */
+  .mobileheader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner img {
+    padding: 0;
+    width: 100%;
+  }
+
+  .bannerwrapperright {
+    padding-right: 16px;
+    width: 100%;
+  }
+
+  .bannerwrapperright h3 {
+    margin-top: 32px;
+  }
+
+  .information {
+    padding: 16px 16px 0;
+    width: 100%;
+  }
+
+  .informationwrapperright {
+    width: 100%;
+  }
+
+  .info_righthalf {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+
+  .info_image {
+    width: 100%;
+  }
+
+  .infoimageright {
+    margin: 0;
+    padding: 32px 16px 64px;
+    width: 100%;
+  }
+
+  .infowrapright_bottom {
+    background-color: inherit;
+  }
+
+  .infowrapright_bottom .infoimageright {
+    padding-bottom: 32px;
+  }
+
+  .courses {
+    border-top: gray solid 1px;
+    border-bottom: gray solid 1px;
+    padding: 32px 16px;
+  }
+
+  .thesis {
+    margin: 32px 0 24px;
+    padding: 0;
+  }
+
+  .thesisheading {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+  }
+
+  .thesiswrapperleft {
+    padding: 0;
+    width: 100%;
+  }
+
+  .footerwrapper {
+    border-top: none;
+  }
+
 }
