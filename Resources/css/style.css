@@ -53,6 +53,7 @@ a:visited {
 .headerwrapper {
   align-items: center;
   background-color: #FFF;
+  border-bottom: 2px #AAA solid;
   justify-content: space-between;
   padding: 0 24px;
   position: fixed;
@@ -89,7 +90,7 @@ a:visited {
 }
 
 .header_backgrounddiv {
-  background-color: blue;
+  background-color: gray;
   height: 64px;
   width: 100%;
 }
@@ -130,6 +131,10 @@ a:visited {
 /* -----Information Segment----- */
 
 .information {
+  padding-top: 32px;
+}
+
+.information h2 {
   padding-top: 32px;
 }
 
@@ -214,13 +219,6 @@ a:visited {
   width: 100%;
 }
 
-.courseimage {
-  background-color: #FFF;
-  padding: 16px 16px 24px;
-  width: 100%;
-  height: 9rem;
-}
-
 /* -----Theis Segment----- */
 
 /* Much of the thesis Segment code is also included in the Information Segment code above */
@@ -267,9 +265,154 @@ a:visited {
 
 /*----- Media Queries -----*/
 
-@media only screen and (max-width: 12230px) {
+@media only screen and (max-width: 1245px) {
+  .bannerwrapperright {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  .bannerwrapperright {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .bannerwrapperright {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 876px) {
+  .headerright li {
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  h2 {
+    font-size: 2.75rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .headerwrapper {
+    padding: 0;
+  }
+
+  .headerleft img {
+    height: 2rem;
+  }
+
+  .headerright li {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .bannerwrapperright {
+    padding: 32px 0;
+  }
+
+  .info_righthalf {
+    padding: 0 0 16px 0;
+  }
+
+  .thesiswrapperouter {
+    flex-direction: column;
+  }
+
+  .thesiswrapperleft {
+    width: 100%;
+  }
+
+  .thesiswrapperright {
+    flex-direction: row;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .thesiswrapright_bottom {
+    border: 2px lightgray solid;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .bannerwrapperright {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .thesis {
+    padding-bottom: 0;
+  }
+
+  .thesis_image {
+    display: none;
+  }
+
+  .thesisimageright {
+    width: 100%;
+  }
+}
+
+/*-----What the HECK??! If I don't have two copies of these rules, they break.-----*/
+/*-----I copied an pasted the top set down below.-----*/
+/*-----It doesn't matter which set I delete, it will break not matter what unless I keep both copies.-----*/
+/*-----WHAT'S GOING ON HERE???!!!-----*/
+/* AHA! I found the problem. It's all taken care of now, but I'll leave these comments in here just for fun. Ahhh... Good memories. */
+
+@media only screen and (max-width: 575px) {
+  .headerleft img {
+    height: 1.75rem;
+  }
+
+  .headerright li {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 0.9rem;
+  }
+
+  .infoimageright {
+    margin-right: 0;
+  }
+
+  .info_image {
+    margin-right: 9px;
+  }
+
+  .infoimageright {
+    padding: 8px 0;
+  }
+}
+
+@media only screen and (max-width: 485px) {
   html {
-    font-size: 12px;
+    font-size: 16px;
     /* I probably need to make this smaller for headings, etc. */
   }
 
@@ -348,7 +491,7 @@ a:visited {
   }
 
   .courses {
-    background-color: blue;
+    background-color: #FFF;
     border-top: gray solid 1px;
     border-bottom: gray solid 1px;
     padding: 32px 16px;
@@ -370,13 +513,39 @@ a:visited {
   }
 
   .courseimage {
+    border-radius: 5px;
     padding: 0;
   }
 
-.courseimage h3 {
-  background-color: lightgray;
-  padding: 16px 16px 24px;
-}
+  .courseimage h3 {
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 16px 16px 24px;
+  }
+
+  .courseimage:hover {
+    background-color: #EEE;
+  }
+
+  .courseimage h3:hover {
+    background-color: #AAA;
+  }
+
+  .courseimage:hover p {
+    display: flex;
+  }
+
+  .courseimage:hover .courselist {
+    font-weight: 600;
+  }
+
+  .courseimage:not(:hover) p {
+    display: none;
+  }
+
+  .courseimage:hover, .courseimage h3:hover {
+    transition: 350ms;
+  }
 
   .thesis {
     margin: 32px 0 24px;
@@ -397,5 +566,40 @@ a:visited {
   .footerwrapper {
     border-top: none;
   }
+}
 
+@media only screen and (min-width: 485px) {
+  .courseimage {
+    background-color: #FFF;
+    padding: 16px 16px 24px;
+    width: 100%;
+    height: 9rem;
+  }
+}
+
+@media only screen and (max-width: 896px) and (min-width: 705px) {
+  .courseimages {
+    max-width: 18rem;
+  }
+}
+
+@media only screen and (max-width: 1089px) and (min-width: 896px) {
+  .courseimages {
+    max-width: 24rem;
+  }
+}
+
+/* I'm not sure why, but code below this comment is broken. */
+/* If I insert it up higher in the file, it will break code beneath it as well. */
+/* Figured it out again. Same mistake as always. I'm just an idiot. Duhrrrr. */
+  @media only screen and (max-width: 1280px) and (min-width: 1090px) {
+  .courseimages {
+    max-width: 20rem;
+  }
+}
+
+  @media only screen and (min-width: 1281px) {
+  .courseimages {
+    max-width: 24rem;
+  }
 }
